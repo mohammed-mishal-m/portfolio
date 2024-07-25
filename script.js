@@ -12,3 +12,13 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const skills = document.querySelectorAll('.skills');
+    skills.forEach(skill => {
+        skill.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                this.classList.toggle('active');
+            }
+        });
+    });
+});
