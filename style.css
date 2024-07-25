@@ -1,4 +1,4 @@
-/* Base styling */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -86,15 +86,36 @@ header nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1em;
 }
-
 .skills {
-    background-color: #1a1a1a;
-    margin: 10px;
-    padding: 20px;
+    background-color: #333;
     border-radius: 10px;
-    width: calc(33% - 40px);
-    color: #fff;
+    padding: 1em;
+    width: 200px;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+}
+.skills h2, .skills p {
+    margin: 0;
+}
+.skills:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+.skills p {
+    display: none;
+}
+.skills:hover p {
+    display: block;
+}
+@media (max-width: 768px) {
+    .skills p {
+        display: none;
+    }
+    .skills.active p {
+        display: block;
+    }
 }
 .social-icons {
     margin-top: 20px;
